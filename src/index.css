@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* TwinLearn Brand Colors - Education Blue & Yellow */
+    --background: 0 0% 100%;
+    --foreground: 207 90% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 207 90% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 90% 15%;
+
+    /* Primary - Education Blue (#1976D2) */
+    --primary: 207 90% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 207 90% 65%;
+    --primary-dark: 207 90% 35%;
+
+    /* Secondary - Accent Yellow (#FFC107) */
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 207 90% 15%;
+    --secondary-light: 45 100% 70%;
+
+    --muted: 207 15% 96%;
+    --muted-foreground: 207 20% 45%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 207 90% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 20% 88%;
+    --input: 207 20% 88%;
+    --ring: 207 90% 48%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(207, 90%, 48%), hsl(207, 90%, 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45, 100%, 51%), hsl(45, 100%, 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(207, 90%, 48%) 0%, hsl(207, 90%, 35%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(207 90% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(207 90% 15% / 0.1), 0 2px 4px -1px hsl(207 90% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(207 90% 15% / 0.1), 0 4px 6px -2px hsl(207 90% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(207 90% 15% / 0.1), 0 10px 10px -5px hsl(207 90% 15% / 0.04);
+    --shadow-glow: 0 0 30px hsl(207 90% 48% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 207 50% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 207 40% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 207 40% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 207 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 207 90% 70%;
+    --primary-dark: 207 90% 40%;
+
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 207 50% 8%;
+    --secondary-light: 45 100% 75%;
+
+    --muted: 207 30% 18%;
+    --muted-foreground: 207 15% 65%;
+
+    --accent: 45 100% 60%;
+    --accent-foreground: 207 50% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 207 30% 20%;
+    --input: 207 30% 20%;
+    --ring: 207 90% 55%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(207, 90%, 55%), hsl(207, 90%, 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45, 100%, 60%), hsl(45, 100%, 75%));
+    --gradient-hero: linear-gradient(135deg, hsl(207, 90%, 55%) 0%, hsl(207, 90%, 40%) 100%);
+
+    --shadow-glow: 0 0 30px hsl(207 90% 55% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
